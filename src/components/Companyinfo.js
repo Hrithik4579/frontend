@@ -19,7 +19,7 @@ export default function Companyinfo(props) {
             credentials: "include",
             header: {
               "Content-Type": "application/json",
-              "Authorization": `Bearer ${getAccessToken()}`,
+              Authorization: `Bearer ${getAccessToken()}`,
             },
           }
         );
