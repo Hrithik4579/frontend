@@ -23,6 +23,7 @@ import About from './components/About.js';
 import Sabout from './components/Sabout.js';
 import Contact from './components/Contact.js';
 import Scontact from './components/Scontact.js';
+import Manage from './components/Manage.js';
 function App() {
   return (
     <>
@@ -54,6 +55,7 @@ function App() {
               <Route exact path='/labout' element={<Labout/>}/>
               <Route exact path='/contact' element={<Contact/>}/>
               <Route exact path='/scontact' element={<Scontact/>}/>
+              <Route exact path='/fetchAll' element={<Manage/>}/>
             </Routes>
           </div>
         </Router>

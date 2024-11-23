@@ -235,6 +235,15 @@ export default function Anavbar() {
                   View Blogs
                 </Link>
               </li>
+              <li
+                className={`nav-item ${
+                  location.pathname === "/fetchAll" ? "active" : ""
+                }`}
+              >
+                <Link className="nav-link" to="/fetchAll">
+                  Manage Students
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="navbar-nav ml-auto">
