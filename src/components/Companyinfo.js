@@ -12,6 +12,8 @@ export default function Companyinfo(props) {
 
     const fetchCompany = async () => {
       try {
+        const accessToken = getAccessToken();
+
         const response = await fetch(
           `https://backend-xwb2.onrender.com/api/admin/job/${companyId}`,
           {
@@ -19,7 +21,7 @@ export default function Companyinfo(props) {
             credentials: "include",
             header: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${getAccessToken()}`,
+              'Authorization': `Bearer ${accessToken}`,
             },
           }
         );

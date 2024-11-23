@@ -7,6 +7,7 @@ import { getAccessToken } from "../getAccessToken";
 
 export default function Companyitem(props) {
   const deleteArticle = async () => {
+    const accessToken = getAccessToken();
     const response = await fetch(
       `https://backend-xwb2.onrender.com/api/admin/job/${props.id}`,
       {
@@ -14,7 +15,7 @@ export default function Companyitem(props) {
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${getAccessToken()}`,
+          Authorization: `Bearer ${accessToken}`,
 
         },
       }
