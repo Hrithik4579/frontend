@@ -131,7 +131,7 @@ export default function Addstudent() {
 
     try {
       const accessToken = getAccessToken();
-      const response = await fetch('https://placementcell-ql79.onrender.com/api/students/register', {
+      const response = await fetch('https://backend-xwb2.onrender.com/api/students/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
