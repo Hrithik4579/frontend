@@ -15,7 +15,7 @@ export default function Companyitem(props) {
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
+          'Authorization': `Bearer ${accessToken}`,
 
         },
       }
