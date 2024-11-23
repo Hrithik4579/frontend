@@ -46,10 +46,10 @@ export default function Applyinfo(props) {
     try {
       e.preventDefault();
       const formData = new FormData();
-      console.log(companyId);
+      // console.log(companyId);
       formData.append('jobId', companyId);
       formData.append('resume', document.getElementById('inputGroupFile02').files[0]);
-      console.log(document.getElementById('inputGroupFile02').files[0]);
+      // console.log(document.getElementById('inputGroupFile02').files[0]);
       const response = await fetch(`https://backend-xwb2.onrender.com/api/applications`, {
         method: "POST",
         body: formData,
@@ -58,7 +58,7 @@ export default function Applyinfo(props) {
         }
       });
 
-      console.log(response);
+      // console.log(response);
   
       if (!response.ok) {
         alert("Application unsuccessful");
