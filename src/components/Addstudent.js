@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import Anavbar from './Anavbar'
 import Asidebar from "./Asidebar"
 import './Addstudent.css';
+import { getAccessToken } from "../getAccessToken";
 
 export default function Addstudent() {
   const formRef = useRef();
@@ -23,11 +24,14 @@ export default function Addstudent() {
     console.log(studentData);
 
     try {
+      const accessToken = getAccessToken();
       const response = await fetch('https://backend-xwb2.onrender.com/api/students/register', {
         method: 'POST',
         credentials: 'include',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${accessToken}`,
+
         },
         body: JSON.stringify(studentData)
       });

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Applyitem from './Applyitem'
 import Snavbar from './Snavbar';
 import './login.css'
+import { getAccessToken } from '../getAccessToken';
+
 export default function Shome() {
   const [articles, setArticles] = useState([]);
 
@@ -13,6 +15,7 @@ export default function Shome() {
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${getAccessToken()}`,
           }
         });
         const json = await response.json();

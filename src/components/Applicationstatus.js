@@ -3,6 +3,8 @@ import Snavbar from './Snavbar';
 import Applicationitem from './Applicationitem';
 import {Link} from 'react-router-dom';
 import './Applicationstatus.css';
+import { getAccessToken } from '../getAccessToken';
+
 export default function Applicationstatus() {
     const [articles, setArticles] = useState([]);
 
@@ -14,6 +16,7 @@ export default function Applicationstatus() {
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${getAccessToken()}`,
           }
         });
         const json = await response.json();

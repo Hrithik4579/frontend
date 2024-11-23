@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./login.css";
 import "./Companyitem.css";
 import { FaTrash } from "react-icons/fa";
+import { getAccessToken } from "../getAccessToken";
 
 export default function Companyitem(props) {
   const deleteArticle = async () => {
@@ -13,6 +14,8 @@ export default function Companyitem(props) {
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${getAccessToken()}`,
+
         },
       }
     );
@@ -30,6 +33,8 @@ export default function Companyitem(props) {
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${getAccessToken()}`,
+
         },
       }
     );

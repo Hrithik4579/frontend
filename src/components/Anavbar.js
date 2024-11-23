@@ -3,6 +3,7 @@ import React from "react";
 import "./login.css";
 import "./Anavbar.css";
 import { Link, useLocation } from "react-router-dom";
+import { getAccessToken } from "../getAccessToken";
 
 export default function Anavbar() {
   const handleClick = async () => {
@@ -12,6 +13,8 @@ export default function Anavbar() {
         credentials: "include",
         header: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${getAccessToken()}`,
+
         },
       });
       const json = await response.json();

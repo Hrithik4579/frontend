@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Snavbar from './Snavbar';
 import './Applyinfo.css';
+import { getAccessToken } from '../getAccessToken';
+
 export default function Applyinfo(props) {
   const { companyId } = useParams();
   const [company, setCompany] = useState({});
@@ -16,6 +18,8 @@ export default function Applyinfo(props) {
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${getAccessToken()}`,
+
           }
         });
         const json = await response.json();

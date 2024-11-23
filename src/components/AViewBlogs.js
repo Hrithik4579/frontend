@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import ABlogitem from './ABlogitem';
 import Anavbar from './Anavbar';
-
+import { getAccessToken } from '../getAccessToken';
 export default function AViewBlogs() {
   const [blogs, setBlogs] = useState([]);
   const [searchCompany, setSearchCompany] = useState('');
   const fetchBlogs = async () => {
     try {
+
       const response = await fetch('https://backend-xwb2.onrender.com/api/blogs', {
         method: "GET",
         credentials: 'include',
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${getAccessToken()}`,
+
         }
       });
       const json = await response.json();

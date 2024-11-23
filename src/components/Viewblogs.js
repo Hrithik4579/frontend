@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Blogitem from './Blogitem';
 import Anavbar from './Anavbar';
+import { getAccessToken } from '../getAccessToken';
 
 export default function Viewblogs() {
   const [blogs, setBlogs] = useState([]);
@@ -12,6 +13,8 @@ export default function Viewblogs() {
         credentials: 'include',
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${getAccessToken()}`,
+
         }
       });
       const json = await response.json();

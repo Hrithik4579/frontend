@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Snavbar from './Snavbar';
+import { getAccessToken } from '../getAccessToken';
 
 export default function Applicationinfo() {
   const { companyId } = useParams();
@@ -15,6 +16,11 @@ export default function Applicationinfo() {
           {
             method: "GET",
             credentials: "include",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${getAccessToken()}`,
+            },
+
 
           }
         );

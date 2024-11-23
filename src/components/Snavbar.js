@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './login.css'
+import { getAccessToken } from '../getAccessToken'
 
 export default function Snavbar() {
 
@@ -13,6 +14,8 @@ export default function Snavbar() {
           credentials: "include",
           header: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${getAccessToken()}`,
+
           },
         }
       );

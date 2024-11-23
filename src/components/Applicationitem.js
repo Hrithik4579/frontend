@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { Link } from 'react-router-dom';
 import Snavbar from './Snavbar';
+import { getAccessToken } from '../getAccessToken';
 
 export default function Applicationitem(props) {
     // const { companyId } = useParams();
@@ -16,6 +17,7 @@ export default function Applicationitem(props) {
             credentials: "include",
             header: {
               "Content-Type": "application/json",
+              "Authorization": `Bearer ${getAccessToken()}`,
             },
           }
         );
