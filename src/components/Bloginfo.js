@@ -11,7 +11,7 @@ export default function Bloginfo() {
 
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/blogs/${blogId}`, {
+        const response = await fetch(`https://backend-xwb2.onrender.com/api/blogs/${blogId}`, {
           method: "GET",
           credentials: 'include',
           headers: {

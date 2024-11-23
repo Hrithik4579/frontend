@@ -23,7 +23,7 @@ export default function Addstudent() {
     console.log(studentData);
 
     try {
-      const response = await fetch('http://localhost:8000/api/students/register', {
+      const response = await fetch('https://backend-xwb2.onrender.com/api/students/register', {
         method: 'POST',
         credentials: 'include',
         headers: {

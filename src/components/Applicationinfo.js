@@ -11,7 +11,7 @@ export default function Applicationinfo() {
       try {
         console.log(companyId);
         const response = await fetch(
-          `http://localhost:8000/api/students/job/${companyId}`,
+          `https://backend-xwb2.onrender.com/api/students/job/${companyId}`,
           {
             method: "GET",
             credentials: "include",
