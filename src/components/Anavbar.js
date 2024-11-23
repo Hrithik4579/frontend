@@ -137,7 +137,7 @@ import { getAccessToken } from "../getAccessToken";
 export default function Anavbar() {
   const handleClick = async () => {
     try {
-      const response = await fetch(`https://backend-xwb2.onrender.com/api/admin/logout`, {
+      const response = await fetch(`https://placementcell-ql79.onrender.com/api/admin/logout`, {
         method: "DELETE",
         header: {
           "Content-Type": "application/json",
