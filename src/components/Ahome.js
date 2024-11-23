@@ -13,6 +13,7 @@ export default function Ahome() {
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
+             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
         });
         const json = await response.json();
