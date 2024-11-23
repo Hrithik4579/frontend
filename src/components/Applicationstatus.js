@@ -22,7 +22,7 @@ export default function Applicationstatus() {
         const json = await response.json();
         
         if (json.success){
-          console.log(json);
+          // console.log(json);
           setArticles(json.data);
         }
         else{

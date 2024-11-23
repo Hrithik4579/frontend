@@ -127,7 +127,7 @@ export default function Addstudent() {
       graduationYear: formData.get('gradyear'),
     };
 
-    console.log(studentData);
+    // console.log(studentData);
 
     try {
       const accessToken = getAccessToken();
@@ -149,7 +149,7 @@ export default function Addstudent() {
       alert('Student added successfully');
       formRef.current.reset();
     } catch (error) {
-      console.error(error);
+      // console.error(error);
       alert('Failed to add student');
     }
   };

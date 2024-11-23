@@ -27,7 +27,7 @@ const SLogin = (props) => {
     }
 
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
     if (json.success) {
       const { accessToken, refreshToken } = json.data;
 
