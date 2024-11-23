@@ -10,7 +10,7 @@ export default function Applicationinfo() {
   useEffect(() => {
     const fetchCompany = async () => {
       try {
-        console.log(companyId);
+        // console.log(companyId);
         const response = await fetch(
           `https://backend-xwb2.onrender.com/api/students/job/${companyId}`,
           {
@@ -24,7 +24,7 @@ export default function Applicationinfo() {
 
           }
         );
-        console.log(companyId);
+        // console.log(companyId);
         const json = await response.json();
         if (json.success) {
           setCompany(json.data);
