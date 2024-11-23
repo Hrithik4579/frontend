@@ -2,18 +2,22 @@ import React, { useEffect, useState } from 'react'
 import Anavbar from './Anavbar'
 import Companyitem from './Companyitem'
 import './login.css'
+import { getAccessToken } from '../getAccessToken'
+
 export default function Ahome() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     const fetchJobs = async () => {
       try {
+        const accessToken = getAccessToken();
         const response = await fetch('https://backend-xwb2.onrender.com/api/admin/job', {
           method: "GET",
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
-             'Authorization': `Bearer ${localStorage.getItem('token')}`
+            "Authorization": `Bearer ${accessToken}`,
+
           }
         });
         const json = await response.json();
