@@ -126,10 +126,10 @@ h2{
     border: none;
     outline: none;
 }
-.inpbox2{
+/* .inpbox2{
     width: 300px;
     margin: 0 auto;
-}
+} */
 .signin{
     width: 100%;
     padding: 8px;
@@ -141,10 +141,10 @@ h2{
     padding: 10px;
     font-family: cursive;
 }
-.ftext2{
+/* .ftext2{
     font-family: cursive;
     margin-left: 20%
-}
+} */
 .ftext,.text-muted{
     font-family: cursive;
 }
