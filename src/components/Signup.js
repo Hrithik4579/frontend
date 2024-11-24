@@ -48,7 +48,7 @@ const Signup = () => {
       <div className="container1">
         <h2 className="admin fs-4 text-start">Admin Signup</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group mb-3 my-4">
+          {/* <div className="form-group mb-3 my-4">
             <label htmlFor="userId" className="ftext">User ID:</label>
             <div className="inpbox">
               <input
@@ -62,8 +62,8 @@ const Signup = () => {
                 required
               />
             </div>
-          </div>
-          <div className="form-group mb-3 my-4">
+          </div> */}
+          {/* <div className="form-group mb-3 my-4">
             <label htmlFor="fullName" className="ftext">Full Name:</label>
             <div className="inpbox">
               <input
@@ -77,7 +77,7 @@ const Signup = () => {
                 required
               />
             </div>
-          </div>
+          </div> */}
           <div className="form-group mb-3 my-4">
             <label htmlFor="email" className="ftext">Email:</label>
             <div className="inpbox">
