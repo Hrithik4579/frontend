@@ -49,8 +49,8 @@ const App = () => {
       <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center' }}>
         <thead>
           <tr>
-            <th>Name</th>
             <th>Enrollment</th>
+            <th>Name</th>
             <th>Email</th>
             <th>CGPA</th>
             <th>Graduating Year</th>
