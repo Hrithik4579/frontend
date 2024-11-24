@@ -50,7 +50,7 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-group mb-3 my-4">
             <label htmlFor="userId" className="ftext">User ID:</label>
-            <div className="inpbox">
+            <div className="inpbox2">
               <input
                 type="text"
                 className="form-control"
