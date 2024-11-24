@@ -24,6 +24,7 @@ import Sabout from './components/Sabout.js';
 import Contact from './components/Contact.js';
 import Scontact from './components/Scontact.js';
 import Manage from './components/Manage.js';
+import Signup from './components/Signup.js';
 function App() {
   return (
     <>
@@ -56,6 +57,7 @@ function App() {
               <Route exact path='/contact' element={<Contact/>}/>
               <Route exact path='/scontact' element={<Scontact/>}/>
               <Route exact path='/fetchAll' element={<Manage/>}/>
+              <Route exact path="/signup" element={<Signup/>}/>
             </Routes>
           </div>
         </Router>

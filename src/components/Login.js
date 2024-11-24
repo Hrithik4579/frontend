@@ -88,6 +88,9 @@ const Login = () => {
           <div className="text-center">
             <Link to="/slogin" className="link text-muted">Sign in as Student?</Link><br /><br />
           </div>
+          <div className="text-center">
+            <Link to="/signup" className="link text-muted">Sign in as Student?</Link><br /><br />
+          </div>
         </form>
       </div>
     </div>
